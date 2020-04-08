@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Card validate</title>
+  <link href="./main.css" rel="stylesheet"></head>
+  <body>
+    <button class="demo">
+      Демо
+    </button>
+    <div class="container">
+      <div class="cards">
+        <div class="front">
+          <a class="logo-link" href="#" target="_blank">
+            <img
+              src="./assets/img/banks/default.png"
+              alt="bank-logo"
+              class="bank-logo"
+            />
+            <div class="logo-title__wrap">
+              <h3 class="bank-title">Ваш Банк</h3>
+              <span class="bank">Bank</span>
+            </div>
+          </a>
+          <div class="front-fields">
+            <input
+              class="field card-number"
+              placeholder="0000 0000 0000 0000"
+              data-length="16"
+              data-next="#mm"
+            />
+            <label class="label date-label">Дейсвует до:</label>
+            <input
+              type="text"
+              class="field card-date"
+              id="mm"
+              placeholder="MM"
+              maxlength="2"
+              data-length="2"
+              data-next="#yy"
+            />
+            <input
+              type="text"
+              class="field card-date"
+              id="yy"
+              placeholder="ГГ"
+              maxlength="2"
+              data-length="2"
+              data-next="#code"
+            />
+            <img
+              src="./assets/img/payment-img/default.png"
+              class="payment"
+              alt="payment"
+            />
+          </div>
+        </div>
+        <div class="back">
+          <div class="back-scan"></div>
+          <div class="back-fields">
+            <input
+              type="text"
+              class="field card-cvv"
+              id="code"
+              maxlength="3"
+              placeholder="CVV"
+            />
+            <label class="label"> Код с&nbsp;обратной стороны</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script  src="./main.js"></script></body>
+</html>
